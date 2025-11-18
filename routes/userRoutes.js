@@ -33,7 +33,7 @@ router.post('/login',
 
 // -- Rutas reservadas para administrador -- //
 
-router.post('/mkadm', createAdminUser) //
+// router.post('/mkadm', createAdminUser) //
 // Ruta para consultar todos los usuarios
 router.get('/', validarToken, validarAdmin, getUsers)
 //Ruta para consultar usuario por ID
