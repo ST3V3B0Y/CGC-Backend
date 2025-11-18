@@ -5,7 +5,7 @@ import morgan from "morgan";
 import dotenv from "dotenv";
 import gameRoutes from "./routes/gameRoutes.js";
 import reviewRoutes from "./routes/reviewRoutes.js";
-import userRoutes from "./routes/userRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 
@@ -20,7 +20,7 @@ app.use(morgan("dev")); //Permite ver las peticiones en la consola
 // Rutas
 app.use("/api/games", gameRoutes);
 app.use("/api/reviews", reviewRoutes);
-app.use("/api/auth", userRoutes);
+app.use("/api/auth", authRoutes);
 // Fin Rutas
 
 // Conexión a la base de datos MongoDB Atlas

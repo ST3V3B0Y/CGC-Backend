@@ -8,8 +8,10 @@ const router = express.Router();
 // Ruta para obtener todos los juegos
 router.get('/', getGames);
 
-// Biblioteca del usuario
+// Agregar juego en la biblioteca del usuario
 router.post("/library/add", validarToken, /*addGameToUserLibrary*/);
+
+// Eliminar juego de la biblioteca del usuario
 router.delete("/library/remove/:id", validarToken, /*removeGameFromUserLibrary*/);
 
 // Ruta para obtener un juego por ID
