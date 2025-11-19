@@ -9,7 +9,6 @@ import { createAdminUser } from '../controllers/adminController.js';
 const router = express.Router();
 
 
-
 // Ruta para registrar un nuevo usuario
 
 router.post('/register', 
@@ -33,7 +32,7 @@ router.post('/login',
 
 // -- Rutas reservadas para administrador -- //
 
-// router.post('/mkadm', createAdminUser) //
+// router.post('/mkadm', createAdminUser)
 // Ruta para consultar todos los usuarios
 router.get('/', validarToken, validarAdmin, getUsers)
 //Ruta para consultar usuario por ID
@@ -46,7 +45,7 @@ router.delete('/:id', validarToken, validarAdmin, deleteUser)
 
 // ---------------------------------------- //
 
-// Ruta temporal para probar contraseñas (NO USAR EN PRODUCCIÓN)
-router.post('/test-password', testPassword);
+// Ruta temporal para probar contraseñas
+// router.post('/test-password', testPassword);
 
 export default router;

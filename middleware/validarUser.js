@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-const JWT_SECRET = process.env.JWT_SECRET || "temp_secretkey";
+const JWT_SECRET = process.env.JWT_SECRET || "$Colgame2025$";
 
 export const validarToken = (req, res, next) => {
     const token = req.header("Authorization")?.split(" ")[1];

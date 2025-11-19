@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 
 // Controladores para manejar las operaciones relacionadas con los usuarios
 
-const JWT_SECRET = process.env.JWT_SECRET || "$Colgame2025$*";
+const JWT_SECRET = process.env.JWT_SECRET || "$Colgame2025$";
 
 
 // Registrar un nuevo usuario
