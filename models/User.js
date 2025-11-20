@@ -6,6 +6,12 @@ const userSchema = new mongoose.Schema({
     correo: { type: String, required: [true, 'Correo electrónico requerido'], trim: true, unique: true, match: [/.+\@.+\..+/, 'Por favor ingrese un correo electrónico válido'] },
     contraseña: { type: String, required: [true, 'Contraseña requerida'], minlength: [6, 'La contraseña debe tener al menos 6 caracteres'], trim: true},
     rol: { type: String, enum: ['usuario', 'admin'], default: 'usuario', trim: true },
+    biblioteca: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Game'
+        }
+    ]
 }, { timestamps: true });
 
 // Hashear la contraseña antes de guardar el usuario

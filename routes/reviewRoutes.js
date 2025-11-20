@@ -13,7 +13,7 @@ router.get('/', getReview);
 router.get('/:id', getReviewById);
 
 // Ruta para obtener una reseña por un juego específico
-router.get('/game/:juegoId', getReviewByGameId);
+router.get('/game/:gameId', getReviewByGameId);
 
 // Ruta para crear una nueva reseña
 router.post('/', validarToken, validarReview, createReview);
