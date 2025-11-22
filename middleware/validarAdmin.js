@@ -8,7 +8,7 @@ export const validarAdmin = (req, res, next) => {
         if (req.user.rol !== 'admin') {
             return res.status(403).json({ message: "Acceso denegado. Se requieren privilegios de administrador." });
         }
-        next(); // Continua si es admin
+        next("/admin-panel");
     } catch (error) {
         console.error('Error completo:', error);
         res.status(500).json({

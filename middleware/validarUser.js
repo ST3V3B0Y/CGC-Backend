@@ -15,7 +15,7 @@ export const validarToken = (req, res, next) => {
             id: decoded.id,
             correo: decoded.correo,
             rol: decoded.rol
-        }; // Agregar la información del usuario al objeto de la solicitud
+        };
         next();
     } catch (error) {
         console.error('Error completo:', error);

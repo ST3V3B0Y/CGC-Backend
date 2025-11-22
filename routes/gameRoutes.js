@@ -21,7 +21,7 @@ router.get('/:id', getGameById);
 router.post('/', validarAdmin ,createGame);
 
 // Ruta para actualizar un juego existente
-router.put('/:id', validarAdmin, updateGame);
+router.put('/:id', updateGame);
 
 // Ruta para eliminar un juego
 router.delete('/:id',  validarAdmin, deleteGame);
